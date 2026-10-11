@@ -7,10 +7,10 @@ end
 n = height(issues);
 lines = strings(min(n, maxLines), 1);
 for i = 1:numel(lines)
-    if isnan(issues.Row(i))
+    if isnan(issues.DataRow(i))
         where = "";
     else
-        where = sprintf("row %d: ", issues.Row(i));
+        where = sprintf("row %d: ", issues.DataRow(i));
     end
     lines(i) = "  - " + where + issues.Message(i);
 end

@@ -1,7 +1,7 @@
 function issues = validateActivityTable(T)
 %VALIDATEACTIVITYTABLE Check a long-format activity table and list every problem at once.
 %   issues = rlt.io.validateActivityTable(T) returns a table with columns
-%   Severity ("error" | "warning"), Row, Message. An empty result means the table
+%   Severity ("error" | "warning"), DataRow, Message. An empty result means the table
 %   is clean.
 %
 %   Required columns
