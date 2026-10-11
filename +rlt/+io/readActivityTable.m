@@ -21,7 +21,9 @@ end
 if ~isfile(file)
     error('rlt:fileNotFound', 'File not found: %s', file);
 end
-raw    = readtable(file, 'TextType', 'string');
+raw    = rlt.internal.readCsvTable(file, ...
+    ["PatientID","Region","Unit","Isotope"], ...
+    ["Cycle","Time_h","Value","DecayCorrected"]);
 issues = rlt.io.validateActivityTable(raw);
 
 errs = issues(issues.Severity == "error", :);

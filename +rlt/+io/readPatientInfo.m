@@ -21,7 +21,9 @@ end
 if ~isfile(file)
     error('rlt:fileNotFound', 'File not found: %s', file);
 end
-raw   = readtable(file, 'TextType', 'string');
+raw   = rlt.internal.readCsvTable(file, ...
+    ["PatientID","Sex","BoneMetastases"], ...
+    ["Hct","Mass_kg","Height_cm"]);
 names = string(raw.Properties.VariableNames);
 
 sev = strings(0, 1);
@@ -75,14 +77,13 @@ end
 bm = repmat("unknown", n, 1);
 if ismember("BoneMetastases", names)
     b = lower(strtrim(string(raw.BoneMetastases)));
-    for r = 1:n
-        switch b(r)
-            case {"1","yes","true"},      bm(r) = "yes";
-            case {"0","no","false"},      bm(r) = "no";
-            case {"unknown",""},          bm(r) = "unknown";
-            otherwise
-                add("error", r, 'BoneMetastases must be yes, no or unknown (or 1/0).');
-        end
+    isYes     = ismember(b, ["1","yes","true"]);
+    isNo      = ismember(b, ["0","no","false"]);
+    isUnknown = ismember(b, ["unknown",""]) | ismissing(b);
+    bm(isYes) = "yes";
+    bm(isNo)  = "no";
+    for r = find(~(isYes | isNo | isUnknown))'
+        add("error", r, sprintf('BoneMetastases "%s" is not yes, no or unknown (or 1/0).', b(r)));
     end
 end
 

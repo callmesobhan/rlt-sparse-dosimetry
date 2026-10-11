@@ -1,7 +1,7 @@
-Target,Source,Isotope,S,Unit,Reference,ReferenceMass_g
-RedMarrow,RedMarrow,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
-RedMarrow,RemainderOfBody,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
-RedMarrow,Kidneys,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
-RedMarrow,Liver,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
-RedMarrow,Spleen,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
-RedMarrow,Tumours,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source",
+Target,Source,Isotope,S,Unit,Reference
+RedMarrow,RedMarrow,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
+RedMarrow,RemainderOfBody,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
+RedMarrow,Kidneys,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
+RedMarrow,Liver,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
+RedMarrow,Spleen,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
+RedMarrow,Tumours,Lu177,0,mGy/(MBq s),"PLACEHOLDER - replace with value, software and phantom from your S-value source"
