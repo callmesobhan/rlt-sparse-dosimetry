@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Released under the MIT licence.
+
 ## 0.2.0
 - **Bone-marrow module** (`rlt.marrow.*`): RMBLR, blood-based and image-based self-dose with per-model comparison and optional time-dependent ratio, remainder of body, S-value scaling, total-dose assembly, Monte Carlo uncertainty with shared calibration error, elasticity.
 - **Data layer** (`rlt.io.*`): validated import of activity tables (units, mandatory decay-correction flag, duplicates, unit mixing), patient covariates, and S-values with mandatory provenance. Templates in `data/templates/`.
