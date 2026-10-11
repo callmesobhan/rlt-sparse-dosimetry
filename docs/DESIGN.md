@@ -98,5 +98,4 @@ docs/                 MARROW.md, DATA_CHECKLIST.md, DESIGN.md
 1. Which agent first: ¹⁷⁷Lu-PSMA-617 or ¹⁷⁷Lu-DOTATATE? They differ in the likelihood of specific marrow uptake and in bone-metastasis prevalence, which decides the default method.
 2. Does your imaging protocol include a late whole-body acquisition (needed for remainder of body)?
 3. Which S-value source will you use (OLINDA/EXM, MIRDcalc, IDAC-Dose, Monte Carlo)?
-4. Licence (none is set; add one before sharing the repository).
-5. Is MATLAB R2021a the right minimum for your collaborators?
+4. Is MATLAB R2021a the right minimum for your collaborators?

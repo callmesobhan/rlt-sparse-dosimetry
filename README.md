@@ -71,10 +71,14 @@ rlt.report.marrow("P001_marrow.md", res, Patient="P001");
 
 ## Read this before using it on patients
 
-- **Research and teaching code. Not a medical device and not validated for clinical dosimetry.** No licence has been chosen yet; do not redistribute until one is added.
+- **Research and teaching code. Not a medical device and not validated for clinical dosimetry.** It is released under the [MIT licence](LICENSE), which provides it "as is", without warranty. Validating it for any clinical or regulatory use is your responsibility.
 - The virtual-cohort presets (`kidney`, `tumour`, `blood`) are **illustrative numbers, not measured data**. Schedule rankings are only as good as the cohort you simulate.
 - The toolbox ships **no S-values**. Cross-dose terms need values from OLINDA/EXM, MIRDcalc, IDAC-Dose or your own Monte Carlo, with the reference recorded.
 - The blood-based method assumes no specific marrow uptake and no marrow involvement. See [docs/MARROW.md](docs/MARROW.md) before applying it to patients with bone metastases or to ¹⁷⁷Lu-DOTATATE.
 - Isotope constants and the blood density are reference values that were not independently verified. Check them (assumptions register in MARROW.md).
 - The EANM bone-marrow guideline text was not available when the formulas were implemented; compare them with it.
 - The code was written without access to MATLAB. Its numerics were cross-checked in Python, but the MATLAB itself has not been run. Start with `rlt.selfCheck` and `runtests("tests")`; the included GitHub Actions workflow runs the tests on real MATLAB on every push.
+
+## Licence and feedback
+
+[MIT](LICENSE), copyright (c) 2026 Sobhan Shahbazi. Reviews, suggestions and corrections to the formulas, constants and assumptions are welcome as [GitHub issues](https://github.com/callmesobhan/rlt-sparse-dosimetry/issues). The assumptions register in [docs/MARROW.md](docs/MARROW.md) lists what most needs a second pair of eyes.
