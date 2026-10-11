@@ -1,0 +1,2 @@
+PatientID,Sex,Hct,Mass_kg,Height_cm,BoneMetastases
+EXAMPLE_SYNTHETIC,M,0.45,80,178,unknown
