@@ -23,7 +23,9 @@ end
 if ~isfile(file)
     error('rlt:fileNotFound', 'File not found: %s', file);
 end
-raw   = readtable(file, 'TextType', 'string');
+raw   = rlt.internal.readCsvTable(file, ...
+    ["Target","Source","Isotope","Unit","Reference"], ...
+    ["S","ReferenceMass_g"]);
 names = string(raw.Properties.VariableNames);
 
 req = ["Target","Source","Isotope","S","Unit","Reference"];
