@@ -78,7 +78,7 @@ docs/                 MARROW.md, DATA_CHECKLIST.md, DESIGN.md
 ## 6. Validation plan
 
 1. **Analytic tests** (in `tests/`): exact recovery of mono-, bi- and tri-exponential TIA, closed-form extrapolated fraction, trapezoid convergence, single-point optimum at 1/λ, dose constant, marrow-mass independence, analytic elasticities (Hct/(1−Hct), 1, 1), cohort truth against numerical integration, error paths for every validator.
-2. **Cross-implementation check (done for v0.2):** the core numerics were mirrored in Python (NumPy/SciPy) and agreed with the test expectations. This does not replace running MATLAB: use `rlt.selfCheck` and `runtests("tests")`, and the CI workflow.
+2. **Cross-implementation and CI check (done):** the core numerics were mirrored in Python (NumPy/SciPy) and agreed with the test expectations, and the suite now runs on MATLAB R2026b in CI. CI found three data-import bugs that the Python mirror could not (reserved table column name, `readtable` type and delimiter guessing). Still untested: older MATLAB releases (R2021a upward), Windows and macOS.
 3. **Property tests (to add):** fitted rates ≥ λp for random data; TIA monotone in tail rate; AICc ordering with noise-free generated data; round trips through the CSV layer for random tables.
 4. **Real-data comparison (needs patient data):** for patients with a full schedule, treat the full-schedule result as the reference, subsample, and compare against what `evaluateSchedules` predicts. For marrow, compare blood-based against image-based and against toxicity (platelet nadir), as in the cited studies.
 5. **Cross-check against validated software:** compare absorbed dose with OLINDA/EXM, MIRDcalc or your department's dosimetry software on shared cases.

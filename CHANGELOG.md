@@ -2,6 +2,7 @@
 
 ## Unreleased
 - Released under the MIT licence.
+- First run on real MATLAB (CI, R2026b) found and fixed three import bugs: a validation table column named `Row` (reserved by MATLAB tables), CSV column types guessed wrongly by `readtable` (now declared in `rlt.internal.readCsvTable`), and the delimiter guessed wrongly for a file with long quoted text (now fixed to comma). Unit tests: 56 pass.
 
 ## 0.2.0
 - **Bone-marrow module** (`rlt.marrow.*`): RMBLR, blood-based and image-based self-dose with per-model comparison and optional time-dependent ratio, remainder of body, S-value scaling, total-dose assembly, Monte Carlo uncertainty with shared calibration error, elasticity.

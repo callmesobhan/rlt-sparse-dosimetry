@@ -1,5 +1,7 @@
 # rlt-sparse-dosimetry
 
+[![tests](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml/badge.svg)](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml) [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
 MATLAB toolbox for **time-integrated activity (TIA) and absorbed dose from sparse post-therapy measurements** in radioligand therapy (¹⁷⁷Lu-PSMA, ¹⁷⁷Lu-DOTATATE, ⁹⁰Y, ¹³¹I), with a focus on **red-bone-marrow dosimetry**.
 
 ## The problem
@@ -77,7 +79,7 @@ rlt.report.marrow("P001_marrow.md", res, Patient="P001");
 - The blood-based method assumes no specific marrow uptake and no marrow involvement. See [docs/MARROW.md](docs/MARROW.md) before applying it to patients with bone metastases or to ¹⁷⁷Lu-DOTATATE.
 - Isotope constants and the blood density are reference values that were not independently verified. Check them (assumptions register in MARROW.md).
 - The EANM bone-marrow guideline text was not available when the formulas were implemented; compare them with it.
-- The code was written without access to MATLAB. Its numerics were cross-checked in Python, but the MATLAB itself has not been run. Start with `rlt.selfCheck` and `runtests("tests")`; the included GitHub Actions workflow runs the tests on real MATLAB on every push.
+- **Test status:** the 56 unit tests pass on MATLAB R2026b (Linux) in CI on every push. The first CI run found real bugs in the data-import layer, since fixed, so treat import code on your own files and platform as freshly tested. MATLAB releases between R2021a and R2025b, Windows and macOS have not been tested. Passing tests show that the code does what it was written to do, not that the dosimetry is clinically valid; see the points above.
 
 ## Licence and feedback
 
