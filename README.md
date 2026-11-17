@@ -1,8 +1,26 @@
-# rlt-sparse-dosimetry
+<div align="center">
 
-[![tests](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml/badge.svg)](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml) [![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+# rlt-sparse-dosimetry 🧬📐
 
-MATLAB toolbox for **time-integrated activity (TIA) and absorbed dose from sparse post-therapy measurements** in radioligand therapy (¹⁷⁷Lu-PSMA, ¹⁷⁷Lu-DOTATATE, ⁹⁰Y, ¹³¹I), with a focus on **red-bone-marrow dosimetry**.
+**Time-Integrated Activity (TIA) & Red-Bone-Marrow Dosimetry from Sparse RLT Measurements**  
+*Physically constrained kinetic fitting, AICc model selection, sampling-schedule benchmarking, and auditable marrow dosimetry in MATLAB*
+
+[![tests](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml/badge.svg)](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml)
+[![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+[![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B%20(Base%20Only)-e16737)](#quick-start)
+[![Isotopes](https://img.shields.io/badge/Isotopes-177Lu%20%7C%2090Y%20%7C%20131I-10b981)](#what-it-does)
+
+</div>
+
+## Workflow Architecture
+
+```mermaid
+flowchart LR
+    A["📥 Validated Intake (+rlt.io: Units, Decay, Hct)"] --> B["Constrained Biokinetic Fit (Mono / Bi / Tri / Uptake + AICc)"]
+    B --> C["Time-Integrated Activity (TIA) + Tail Extrapolation Audit"]
+    C --> D["Red-Bone-Marrow Self + Cross Dose (+rlt.marrow)"]
+    D --> E["Monte Carlo Uncertainty + Auditable Markdown Report"]
+```
 
 ## The problem
 
