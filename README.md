@@ -36,6 +36,7 @@ Published work illustrates the stakes: the same ¹⁷⁷Lu-DOTATATE patients gav
 4. **Benchmarks sampling schedules** on virtual cohorts with known truth: for each schedule and estimator, how often is the TIA within 10%?
 5. **Validated data intake** (`rlt.io`): units, a mandatory decay-correction flag, duplicates, haematocrit entered as percent, S-values without a recorded reference, all rejected with a complete list of problems.
 6. **Audit trail:** every result carries its assumptions, warnings and software provenance; `rlt.report.marrow` writes them to a Markdown report.
+7. **Empirical Cycle-1 → Cycle-2+ Bayesian NLME schedule optimizer (`+rlt/+nlme`) & blood-proxy violation auditor (`rlt.marrow.auditBloodProxy`):** ingests a centre's own Cycle-1 multi-time-point patients, fits a hierarchical log-normal population prior, runs Empirical Bayes MAP Cycle-2+ single/two-time-point TIA + credible intervals (shrinking each patient's Cycle-1 fit toward the population prior), optimizes the Cycle-2+ scan window under explicit worst-case toxicity-miss risk bounds, and automatically flags patients whose paired blood-vs-VOI kinetics violate constant-RMBLR blood-proxy assumptions (specific marrow uptake / infiltration).
 
 ## Quick start
 
