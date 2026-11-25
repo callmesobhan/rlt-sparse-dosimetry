@@ -6,7 +6,7 @@
 *Physically constrained kinetic fitting, AICc model selection, sampling-schedule benchmarking, and auditable marrow dosimetry in MATLAB*
 
 [![tests](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml/badge.svg)](https://github.com/callmesobhan/rlt-sparse-dosimetry/actions/workflows/test.yml)
-[![licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+[![License: Non-Commercial (Research & Personal)](https://img.shields.io/badge/License-Non--Commercial%20(Research%20%26%20Personal)-f59e0b.svg)](LICENSE)
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B%20(Base%20Only)-e16737)](#quick-start)
 [![Isotopes](https://img.shields.io/badge/Isotopes-177Lu%20%7C%2090Y%20%7C%20131I-10b981)](#what-it-does)
 
@@ -92,7 +92,7 @@ rlt.report.marrow("P001_marrow.md", res, Patient="P001");
 
 ## Read this before using it on patients
 
-- **Research and teaching code. Not a medical device and not validated for clinical dosimetry.** It is released under the [MIT licence](LICENSE), which provides it "as is", without warranty. Validating it for any clinical or regulatory use is your responsibility.
+- **Research and teaching code. Not a medical device and not validated for clinical dosimetry.** It is released under the [Non-Commercial Personal & Academic Research License](LICENSE), which provides it "as is", without warranty. Validating it for any clinical or regulatory use is your responsibility.
 - The virtual-cohort presets (`kidney`, `tumour`, `blood`) are **illustrative numbers, not measured data**. Schedule rankings are only as good as the cohort you simulate.
 - The toolbox ships **no S-values**. Cross-dose terms need values from OLINDA/EXM, MIRDcalc, IDAC-Dose or your own Monte Carlo, with the reference recorded.
 - The blood-based method assumes no specific marrow uptake and no marrow involvement. See [docs/MARROW.md](docs/MARROW.md) before applying it to patients with bone metastases or to ¹⁷⁷Lu-DOTATATE.
@@ -102,4 +102,4 @@ rlt.report.marrow("P001_marrow.md", res, Patient="P001");
 
 ## Licence and feedback
 
-[MIT](LICENSE), copyright (c) 2026 Sobhan Shahbazi. Reviews, suggestions and corrections to the formulas, constants and assumptions are welcome as [GitHub issues](https://github.com/callmesobhan/rlt-sparse-dosimetry/issues). The assumptions register in [docs/MARROW.md](docs/MARROW.md) lists what most needs a second pair of eyes.
+**Non-Commercial Personal & Academic Research License (NC-PARL 1.0)** — see [LICENSE](LICENSE), copyright (c) 2026 Sobhan Shahbazi. Free for personal use and non-commercial research with citation (`Sobhan Shahbazi (2026). rlt-sparse-dosimetry. https://github.com/callmesobhan/rlt-sparse-dosimetry`); commercial use requires a written license. Reviews, suggestions and corrections to the formulas, constants and assumptions are welcome as [GitHub issues](https://github.com/callmesobhan/rlt-sparse-dosimetry/issues). The assumptions register in [docs/MARROW.md](docs/MARROW.md) lists what most needs a second pair of eyes.
